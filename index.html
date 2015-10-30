@@ -6,18 +6,22 @@
 	<!-- Cargamos angular
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
 	 -->
-	<!-- Cargamos jquery -->
-	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<!-- Cargamos las librerias de tadatable tools-->
-	<script src="https://cdn.datatables.net/r/dt/dt-1.10.9/datatables.min.js"></script>
-	<script src="https://cdn.datatables.net/tabletools/2.2.4/js/dataTables.tableTools.min.js"></script>
-	 
+	 <!-- Cargamos jquery -->
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+   
+<!-- Cargamos las librerias de tadatable tools-->
+
+	<script src="https://cdn.datatables.net/1.10.9/js/jquery.dataTables.min.js"></script> 
+
+
+	<script src="tableTools.min.js"></script>
+
 	<!-- Cargamos el javascript de angular -->
 	<script src="app.js"></script>
 
 	<!-- Cargamos los css de datatable tools -->
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
-	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/tabletools/2.2.4/css/dataTables.tableTools.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/tabletools/2.2.4/css/dataTables.tableTools.css">
 		<!-- Cargamos bootstrap -->
 	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 	<!-- Creamos un script usando jquery temporal para crear el pdf y luego lo pasaremos a una directiva llamada tablepdf-->
@@ -34,7 +38,7 @@
 <body ng-app>
 	<div  ng-controller="Ctrl" class="container" align="center">
 		<div class="row">
-			<table id="datable">
+			<table id="datatable">
 				<thead>
 					<tr>
 						<th>#</th>
