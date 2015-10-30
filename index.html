@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exportar tablas a pdf</title>
+
+	<!-- Cargamos angular
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+	 -->
+	<!-- Cargamos jquery -->
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<!-- Cargamos las librerias de tadatable tools-->
+	<script src="https://cdn.datatables.net/r/dt/dt-1.10.9/datatables.min.js"></script>
+	<script src="https://cdn.datatables.net/tabletools/2.2.4/js/dataTables.tableTools.min.js"></script>
+	 
+	<!-- Cargamos el javascript de angular -->
+	<script src="app.js"></script>
+
+	<!-- Cargamos los css de datatable tools -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.9/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/tabletools/2.2.4/css/dataTables.tableTools.min.css">
+		<!-- Cargamos bootstrap -->
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<!-- Creamos un script usando jquery temporal para crear el pdf y luego lo pasaremos a una directiva llamada tablepdf-->
+	 <script type="text/javascript">
+	$(document).ready(function(){
+		var table = $('#datatable').dataTable();
+		var tableTools = new $.fn.dataTable.TableTools(table);
+		$(tableTools.fnContainer()).insertBefore('#datatable_wrapper');
+
+
+	});
+	</script> 
+</head>
+<body ng-app>
+	<div  ng-controller="Ctrl" class="container" align="center">
+		<div class="row">
+			<table id="datable">
+				<thead>
+					<tr>
+						<th>#</th>
+						<tH>ID</td>		
+						<th>City</th>
+						<th>Country</th>
+						<th>Continent</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<th>#</th>
+						<th>ID</th>
+						<th>City</th>
+						<th>Country</th>
+						<th>Continent</th>
+					</tr>
+				</tfoot>
+				<tbody>
+					<!--<tr ng-repeat="datos in dato">-->
+					<tr>
+						<td>1</td>
+						<td>123</td>	
+						<td>San Jose</td>
+						<td>CR</td>
+						<td>America Central</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>141</td>	
+						<td>San Jose</td>
+						<td>CR</td>
+						<td>America Central</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>223</td>	
+						<td>San Jose</td>
+						<td>CR</td>
+						<td>America Central</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>111</td>	
+						<td>San Jose</td>
+						<td>CR</td>
+						<td>America Central</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>321</td>	
+						<td>San Jose</td>
+						<td>CR</td>
+						<td>America Central</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+
+</body>
+</html>
